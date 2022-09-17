@@ -18,3 +18,4 @@ When writing the programme, I initially ran it for a certain number of steps to 
 
 Also, every 5000 game-runs I sampled the number of wins in those 5000 games in order to sample the win probability, with aims of generating a distribution around the probability of wining this game, as I was curious to see the variance around how many wins someone can get. A roughly normal-looking histogram was the result so I performed some statistical tests to see the closeness of fit to a normal distrubution with the mean and variance obtained from the sampling.
 
+The function to call to run it all is fast_sim, where the first argument determines the error in probability in which the simulation should stop - I have defined the error as the difference between two consecutive probabilities, so can be seen as convergence criteria in the monte carlo simulation. The second argument specifies how close this real error should get to the user-defined-error before the simulation ends.
